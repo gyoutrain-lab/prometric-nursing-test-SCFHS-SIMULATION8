@@ -600,7 +600,7 @@ function showResult() {
 </script>
 <script>
 // ================= CONFIG =================
-const PROVIDER_CODE = "GYOUTRAIN-APPROVED"; // single demo code
+const PROVIDER_CODE = "GYOUTRAIN-APPROVED"; // demo code
 let candidateKey = ""; // unique per candidate
 
 // ================= CREATE REGISTRATION =================
@@ -641,7 +641,7 @@ function register() {
         return;
     }
 
-    startExam();
+    startExam(); // <-- Replace this with your site's exam start function if different
 }
 
 // ================= UNLOCK =================
@@ -652,14 +652,7 @@ function unlockExam() {
         return;
     }
     localStorage.removeItem(candidateKey); // unlock
-    startExam();
-}
-
-// ================= START EXAM (hook your exam start here) =================
-function startExam() {
-    alert("Exam started! Implement your site exam logic here.");
-    // After exam completes, lock candidate
-    localStorage.setItem(candidateKey, "locked");
+    startExam(); // <-- Replace this with your site's exam start function
 }
 
 // ================= INITIALIZE =================
